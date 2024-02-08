@@ -145,13 +145,14 @@ extension CameraViewModel: AVCapturePhotoCaptureDelegate {
         // This is a placeholder to represent where you would do this.
         // The actual C2PA implementation will depend on the specific SDK or libraries you are using.
         
-        // For demonstration, save image to photo library (this needs to run on main thread)
+        // Save image to photo library on main thread
         DispatchQueue.main.async {
-            let image = UIImage(data: imageData)
-            UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+            if let image = UIImage(data: imageData) {
+                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            }
         }
     }
-}
+} // This is the closing brace for the extension
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
