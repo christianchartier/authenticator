@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  C2PA
 //
-//  Created by Christian Chartier on 2024-02-07.
+//  Created by Christian Chartier on 2024-02-06.
 //
 
 import SwiftUI
